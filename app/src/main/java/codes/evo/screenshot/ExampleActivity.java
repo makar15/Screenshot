@@ -69,7 +69,7 @@ public class ExampleActivity extends AppCompatActivity {
             }
         });
 
-        final String name = "/test";
+        final String name = "/file_name";
         Button capture = (Button) findViewById(R.id.capture_btn);
         capture.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,7 +77,7 @@ public class ExampleActivity extends AppCompatActivity {
                 try {
                     if (mScreenController.isEnabledScreenSharing()) {
                         mScreenController.takeScreen();
-                        mScreenName = name + String.valueOf(mCounter);
+                        mScreenName = name + "_" + String.valueOf(mCounter);
                         mCounter++;
                     }
                 } catch (ScreenshotException e) {
